@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">MultiLanguage</string>
+    <string name="playlist">Playlist</string>
+    <string name="stations">Stations</string>
+    <string name="songs">Songs</string>
+    <string name="albums">Albums</string>
+    <string name="artist">Artist</string>
+    <string name="english">English</string>
+    <string name="japanese">Japanese</string>
+    <string name="this_sentence_is_in_english">THIS SENTENCE IS IN ENGLISH</string>
+    <string name="drink_now_drink_later_drink_everyday">Drink Now, Drink Later, Drink Everyday</string>
+    <string name="go_to_mami">Go To MAMI</string>
+    <string name="you_have_no_internet_connection_please_try_again">You have no Internet Connection,\n Please Try Again</string>
+</resources>

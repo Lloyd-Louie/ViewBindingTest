@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">多言語</string>
+    <string name="playlist">プレイリスト</string>
+    <string name="stations">駅</string>
+    <string name="songs">曲</string>
+    <string name="albums">アルバム</string>
+    <string name="artist">アーティスト</string>
+    <string name="english">英語</string>
+    <string name="japanese">日本</string>
+    <string name="this_sentence_is_in_english">この文は日本語です</string>
+    <string name="drink_now_drink_later_drink_everyday">今飲む、後で飲む、毎日飲む</string>
+    <string name="go_to_mami">MAMIに移動</string>
+    <string name="you_have_no_internet_connection_please_try_again">インターネットに接続していません。\nもう一度お試しください</string>
+</resources>
