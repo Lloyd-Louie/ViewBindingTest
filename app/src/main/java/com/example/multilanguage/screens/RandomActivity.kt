@@ -3,6 +3,7 @@ package com.example.multilanguage.screens
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
+import androidx.activity.viewModels
 import androidx.recyclerview.widget.GridLayoutManager
 import com.example.multilanguage.R
 import com.example.multilanguage.adapters.MemeAdapter
@@ -14,12 +15,15 @@ import com.example.multilanguage.utils.GLOBAL_TAG
 import com.example.multilanguage.utils.setSafeOnClickListener
 import com.example.multilanguage.utils.show
 import com.example.multilanguage.viewmodel.MemeViewModel
+import dagger.hilt.android.AndroidEntryPoint
+
 import org.koin.androidx.viewmodel.ext.android.viewModel
+import javax.inject.Inject
 
-
+@AndroidEntryPoint
 class RandomActivity : BaseActivity<ActivityRandomBinding>() {
     private lateinit var binding: ActivityRandomBinding
-    private val memeViewModel: MemeViewModel by viewModel()
+    private val memeViewModel: MemeViewModel by viewModels()
     private val memeAdapter: MemeAdapter = MemeAdapter()
     override fun onCreate(savedInstanceState: Bundle?) {
         binding = ActivityRandomBinding.inflate(layoutInflater)

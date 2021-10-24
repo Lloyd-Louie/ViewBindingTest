@@ -8,12 +8,13 @@ import android.os.Build
 import com.example.multilanguage.utils.UserSessionManager
 import com.example.multilanguage.utils.appModules
 import com.facebook.stetho.Stetho
+import dagger.hilt.android.HiltAndroidApp
 import org.koin.android.ext.koin.androidContext
 import org.koin.android.ext.koin.androidLogger
 import org.koin.core.context.startKoin
 import java.util.*
 
-
+@HiltAndroidApp
 class MultiLanguageApplication:Application(), LifecycleObserver {
     init {
         instance = this
@@ -36,11 +37,11 @@ class MultiLanguageApplication:Application(), LifecycleObserver {
         // Logs
         Stetho.initializeWithDefaults(this)
         // Dependency injection
-        startKoin {
-            androidLogger()
-            androidContext(this@MultiLanguageApplication)
-            modules(appModules)
-        }
+//        startKoin {
+//            androidLogger()
+//            androidContext(this@MultiLanguageApplication)
+//            modules(appModules)
+//        }
 
     }
 

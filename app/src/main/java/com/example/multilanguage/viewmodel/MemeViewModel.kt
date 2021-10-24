@@ -11,15 +11,17 @@ import com.example.multilanguage.utils.SingleLiveEvent
 import com.example.multilanguage.utils.decodeNetworkError
 import com.example.multilanguage.utils.decodeUnknownError
 import com.haroldadmin.cnradapter.NetworkResponse
+import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
-
-class MemeViewModel(private val userRepository: UserRepository) :BaseViewModel() {
+import javax.inject.Inject
+@HiltViewModel
+class MemeViewModel @Inject constructor (private val userRepository: UserRepository) :BaseViewModel() {
     val memeResponse = SingleLiveEvent<MemeImages>()
 
     fun getMemeImages(){
-        jobList.add(launch {
+        viewModelScope.launch {
         val result = withContext(Dispatchers.IO) { userRepository.getMemeImages() }
         when (result) {
             is NetworkResponse.Success -> {
@@ -41,7 +43,7 @@ class MemeViewModel(private val userRepository: UserRepository) :BaseViewModel()
                 showUnknownError.value = decodeUnknownError(result.error)
             }
         }
-    })
+    }
     }
 
 }
